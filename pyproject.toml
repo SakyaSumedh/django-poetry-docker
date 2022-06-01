@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "django4-boilerplate"
+version = "0.1.0"
+description = "Boilerplate for Django v4"
+authors = ["Sumedh Shakya <sumedhshakya11@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.0.2"
+django-cors-headers = "^3.11.0"
+djangorestframework = "^3.13.1"
+djangorestframework-simplejwt = "^5.0.0"
+drf-yasg = "^1.20.0"
+python-decouple = "^3.6"
+requests = "^2.27.1"
+swagger-spec-validator = "^2.7.4"
+celery = "^5.2.3"
+pre-commit = "^2.19.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 4
+py_version = 310
